@@ -11,12 +11,20 @@ interface InputAdornmentProps {
 }
 
 const inputAdornmentVariants = cva(
-  'absolute inset-y-0 h-max w-max my-auto cursor-text',
+  'absolute flex justify-center items-center inset-y-0 my-auto cursor-text',
   {
+    defaultVariants: {
+      size: 'md',
+    },
     variants: {
       position: {
         left: 'left-1',
         right: 'right-1',
+      },
+      size: {
+        sm: ' h-6 w-6',
+        md: 'h-7 w-7',
+        lg: 'h-10 w-10',
       },
     },
   },
@@ -27,8 +35,11 @@ export default function InputAdornment({
   children,
 }: InputAdornmentProps) {
   const { size } = useInputContext();
+  console.log({ size });
 
   return (
-    <div className={cn(inputAdornmentVariants({ position }))}>{children}</div>
+    <div className={cn(inputAdornmentVariants({ position, size }))}>
+      {children}
+    </div>
   );
 }

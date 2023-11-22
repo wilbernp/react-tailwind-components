@@ -5,24 +5,103 @@ import { InputAdornment } from './components/InputAdornment';
 export default function App() {
   return (
     <div className="space-y-2">
-      <h3>inputs</h3>
-      {/* <Input placeholder="Input sm" size="sm" fullWidth />
-      <Input placeholder="Input md" size="md" /> */}
+      <h3>inputs with button icon</h3>
       <Input
         placeholder="Input lg"
         size="lg"
         leftAdornment={
           <InputAdornment position="left">
-            <IconButton>
+            <IconButton size="lg">
               <div className="h-6 w-6 rounded-full bg-gray-700"></div>
             </IconButton>
           </InputAdornment>
         }
         rightAdornment={
           <InputAdornment position="right">
-            <IconButton>
+            <IconButton size="lg">
               <div className="h-6 w-6 rounded-full bg-gray-700"></div>
             </IconButton>
+          </InputAdornment>
+        }
+      />
+      <Input
+        placeholder="Input md"
+        leftAdornment={
+          <InputAdornment position="left">
+            <IconButton>
+              <div className="h-4 w-4 rounded-full bg-gray-700"></div>
+            </IconButton>
+          </InputAdornment>
+        }
+        rightAdornment={
+          <InputAdornment position="right">
+            <IconButton>
+              <div className="h-4 w-4 rounded-full bg-gray-700"></div>
+            </IconButton>
+          </InputAdornment>
+        }
+      />
+
+      <Input
+        placeholder="Input sm"
+        size="sm"
+        leftAdornment={
+          <InputAdornment position="left">
+            <IconButton size="sm">
+              <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
+            </IconButton>
+          </InputAdornment>
+        }
+        rightAdornment={
+          <InputAdornment position="right">
+            <IconButton size="sm">
+              <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
+            </IconButton>
+          </InputAdornment>
+        }
+      />
+
+      <h3>inputs without button icon</h3>
+
+      <Input
+        placeholder="Input lg"
+        size="lg"
+        leftAdornment={
+          <InputAdornment position="left">
+            <div className="h-6 w-6 rounded-full bg-gray-700"></div>
+          </InputAdornment>
+        }
+        rightAdornment={
+          <InputAdornment position="right">
+            <div className="h-6 w-6 rounded-full bg-gray-700"></div>
+          </InputAdornment>
+        }
+      />
+      <Input
+        placeholder="Input md"
+        leftAdornment={
+          <InputAdornment position="left">
+            <div className="h-4 w-4 rounded-full bg-gray-700"></div>
+          </InputAdornment>
+        }
+        rightAdornment={
+          <InputAdornment position="right">
+            <div className="h-4 w-4 rounded-full bg-gray-700"></div>
+          </InputAdornment>
+        }
+      />
+
+      <Input
+        placeholder="Input sm"
+        size="sm"
+        leftAdornment={
+          <InputAdornment position="left">
+            <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
+          </InputAdornment>
+        }
+        rightAdornment={
+          <InputAdornment position="right">
+            <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
           </InputAdornment>
         }
       />

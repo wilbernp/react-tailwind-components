@@ -23,8 +23,8 @@ const buttonVariants = cva(
     },
     variants: {
       size: {
-        sm: 'px-2 sm:text-xs h-8',
-        md: 'px-2.5 h-10',
+        sm: 'px-2 sm:text-xs h-9',
+        md: 'px-2.5 h-11',
         lg: 'px-4 sm:text-md h-14',
       },
       withLeftAdornment: { false: 'px-4' },
@@ -33,6 +33,10 @@ const buttonVariants = cva(
     compoundVariants: [
       { size: 'lg', withLeftAdornment: true, className: 'pl-12' },
       { size: 'lg', withRightAdornment: true, className: 'pr-12' },
+      { size: 'md', withLeftAdornment: true, className: 'pl-9' },
+      { size: 'md', withRightAdornment: true, className: 'pr-9' },
+      { size: 'sm', withLeftAdornment: true, className: 'pl-8' },
+      { size: 'sm', withRightAdornment: true, className: 'pr-8' },
     ],
   },
 );
