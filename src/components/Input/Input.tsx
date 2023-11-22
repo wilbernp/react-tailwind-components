@@ -13,7 +13,7 @@ type InputProps = InputPropsBase & {
   rightAdornment?: JSX.Element;
 };
 
-const buttonVariants = cva(
+const inputVariants = cva(
   'border outline-none hover:border-gray-700 border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block focus:ring-1',
   {
     defaultVariants: {
@@ -65,7 +65,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <input
             type={type}
             className={cn(
-              buttonVariants({
+              inputVariants({
                 size,
                 className,
                 withLeftAdornment,

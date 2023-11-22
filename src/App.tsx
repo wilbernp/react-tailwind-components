@@ -17,7 +17,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <IconButton size="lg">
               <div className="h-6 w-6 rounded-full bg-gray-700"></div>
             </IconButton>
@@ -34,7 +34,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <IconButton>
               <div className="h-4 w-4 rounded-full bg-gray-700"></div>
             </IconButton>
@@ -53,7 +53,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <IconButton size="sm">
               <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
             </IconButton>
@@ -72,7 +72,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <div className="h-6 w-6 rounded-full bg-gray-700"></div>
           </InputAdornment>
         }
@@ -85,7 +85,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <div className="h-4 w-4 rounded-full bg-gray-700"></div>
           </InputAdornment>
         }
@@ -100,7 +100,7 @@ export default function App() {
           </InputAdornment>
         }
         rightAdornment={
-          <InputAdornment position="right">
+          <InputAdornment>
             <div className="h-3.5 w-3.5 rounded-full bg-gray-700"></div>
           </InputAdornment>
         }

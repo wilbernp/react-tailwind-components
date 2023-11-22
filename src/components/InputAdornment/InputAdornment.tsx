@@ -6,7 +6,7 @@ import React from 'react';
 type InputAdornamentPositions = 'left' | 'right';
 
 interface InputAdornmentProps {
-  position: InputAdornamentPositions;
+  position?: InputAdornamentPositions;
   children?: React.ReactElement;
 }
 
@@ -15,6 +15,7 @@ const inputAdornmentVariants = cva(
   {
     defaultVariants: {
       size: 'md',
+      position: 'right',
     },
     variants: {
       position: {
