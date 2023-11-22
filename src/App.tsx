@@ -11,15 +11,15 @@ export default function App() {
       <Input
         placeholder="Input lg"
         size="lg"
-        startAdornment={
-          <InputAdornment position="start">
-            {/* <IconButton> */}
-            <div className="h-6 w-6 rounded-full bg-gray-700"></div>
-            {/* </IconButton> */}
+        leftAdornment={
+          <InputAdornment position="left">
+            <IconButton>
+              <div className="h-6 w-6 rounded-full bg-gray-700"></div>
+            </IconButton>
           </InputAdornment>
         }
-        endAdornment={
-          <InputAdornment position="end">
+        rightAdornment={
+          <InputAdornment position="right">
             <IconButton>
               <div className="h-6 w-6 rounded-full bg-gray-700"></div>
             </IconButton>
