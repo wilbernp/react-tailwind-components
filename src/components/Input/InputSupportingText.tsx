@@ -19,7 +19,6 @@ type InputSupportingTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 export default function InputSupportingText({
   children,
   status = 'default',
-
   className,
   ...restProps
 }: InputSupportingTextProps) {

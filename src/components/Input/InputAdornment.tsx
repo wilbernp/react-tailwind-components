@@ -36,8 +36,6 @@ export default function InputAdornment({
   children,
 }: InputAdornmentProps) {
   const { size } = useInputContext();
-  console.log({ size });
-
   return (
     <div className={cn(inputAdornmentVariants({ position, size }))}>
       {children}
