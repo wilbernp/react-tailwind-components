@@ -1,13 +1,32 @@
-import React from 'react';
+import { cva } from 'class-variance-authority';
+import { IInputStatus } from '@/types';
+import { cn } from '@/utils';
 
-type InputLabelProps = React.LabelHTMLAttributes<HTMLLabelElement>;
+const inputLabelVariants = cva('mb-1 block text-sm ', {
+  variants: {
+    status: {
+      default: 'text-gray-900',
+      error: 'text-red-500',
+      succes: 'text-green-500',
+    },
+  },
+});
+
+type InputLabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
+  status?: IInputStatus;
+};
 
 export default function InputLabel({
+  status = 'default',
   children,
+  className,
   ...restProps
 }: InputLabelProps) {
   return (
-    <label {...restProps} className="mb-2 block text-sm text-gray-900">
+    <label
+      {...restProps}
+      className={cn(inputLabelVariants({ status, className }))}
+    >
       {children}
     </label>
   );

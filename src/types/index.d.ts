@@ -1,1 +1,2 @@
-export type InputSizes = 'sm' | 'md' | 'lg';
+export type IInputSizes = 'sm' | 'md' | 'lg';
+export type IInputStatus = 'default' | 'error' | 'succes';

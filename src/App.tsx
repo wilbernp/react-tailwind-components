@@ -1,13 +1,14 @@
 import { IconButton } from './components/IconButton';
-import { Input } from './components/Input';
+import { InputForm } from './components/Input';
 import { InputAdornment } from './components/InputAdornment';
 
 export default function App() {
   return (
     <div className="space-y-2">
       <h3>inputs with button icon</h3>
-      <Input
+      <InputForm
         label="Input lg"
+        supportingText="supporting text"
         id="input-lg"
         placeholder="Input lg"
         size="lg"
@@ -26,7 +27,7 @@ export default function App() {
           </InputAdornment>
         }
       />
-      <Input
+      <InputForm
         fullWidth
         label="Input md"
         id="input-md"
@@ -47,7 +48,7 @@ export default function App() {
         }
       />
 
-      <Input
+      <InputForm
         label="Input sm"
         id="input-sm"
         placeholder="Input sm"
@@ -70,7 +71,7 @@ export default function App() {
 
       <h3>inputs without button icon</h3>
 
-      <Input
+      <InputForm
         placeholder="Input lg"
         size="lg"
         leftAdornment={
@@ -84,7 +85,7 @@ export default function App() {
           </InputAdornment>
         }
       />
-      <Input
+      <InputForm
         placeholder="Input md"
         leftAdornment={
           <InputAdornment position="left">
@@ -98,7 +99,7 @@ export default function App() {
         }
       />
 
-      <Input
+      <InputForm
         placeholder="Input sm"
         size="sm"
         leftAdornment={
@@ -112,7 +113,7 @@ export default function App() {
           </InputAdornment>
         }
       />
-      <Input placeholder="Input sm" size="sm" />
+      <InputForm placeholder="Input sm" size="sm" />
     </div>
   );
 }

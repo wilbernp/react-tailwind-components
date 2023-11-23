@@ -1,30 +1,35 @@
 import * as React from 'react';
-
-import { cn } from '@/utils';
-import { InputProvider } from '@/context/input';
-import { InputSizes } from '@/types';
+import InputBase from './InputBase';
 import { InputLabel } from '../InputLabel';
 import { InputSupportingText } from '../InputSupportingText';
-import InputBase from './InputBase';
+import { cn } from '@/utils';
+import { InputProvider } from '@/context/input';
+import { IInputSizes, IInputStatus } from '@/types';
 
-type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> & {
-  size?: InputSizes;
+type InputFormProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'size'
+> & {
+  size?: IInputSizes;
+  status?: IInputStatus;
   fullWidth?: boolean;
   leftAdornment?: JSX.Element;
   rightAdornment?: JSX.Element;
   label?: string;
-  // supportingText;
+  supportingText?: string;
 };
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const InputForm = React.forwardRef<HTMLInputElement, InputFormProps>(
   (
     {
       className,
       size = 'md',
+      status = 'default',
       fullWidth,
       leftAdornment,
       rightAdornment,
       label,
+      supportingText,
       id,
       ...restProps
     },
@@ -48,12 +53,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             />
             {rightAdornment}
           </div>
-          <InputSupportingText></InputSupportingText>
+          <InputSupportingText status={status}>
+            {supportingText}
+          </InputSupportingText>
         </div>
       </InputProvider>
     );
   },
 );
-Input.displayName = 'Input';
+InputForm.displayName = 'InputForm';
 
-export default Input;
+export default InputForm;

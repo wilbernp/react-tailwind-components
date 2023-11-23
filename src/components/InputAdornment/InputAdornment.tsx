@@ -1,7 +1,7 @@
-import { useInputContext } from '@/context/input';
-import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import React from 'react';
+import { useInputContext } from '@/context/input';
+import { cn } from '@/utils';
 
 type InputAdornamentPositions = 'left' | 'right';
 

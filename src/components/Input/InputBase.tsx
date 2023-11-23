@@ -1,16 +1,24 @@
 import * as React from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from '@/utils';
-import { InputSizes } from '@/types';
+import { IInputSizes, IInputStatus } from '@/types';
 
 const inputVariants = cva(
-  'border outline-none hover:border-gray-700 border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block focus:ring-1',
+  'border outline-none hover:border-gray-700 text-sm rounded-lg block focus:ring-1',
   {
     variants: {
       size: {
         sm: 'px-2 sm:text-xs h-9',
         md: 'px-2.5 h-11',
         lg: 'px-4 sm:text-base h-14',
+      },
+      status: {
+        default:
+          'border-gray-400 text-gray-900 focus:ring-blue-500 focus:border-blue-500',
+        error:
+          'border-red-500 text-red-500 focus:ring-red-500 focus:border-red-500',
+        succes:
+          'border-green-500 text-green-500 focus:ring-green-500 focus:border-green-500',
       },
       paddingLeft: {
         sm: 'pl-8',
@@ -31,16 +39,18 @@ type InputBaseProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   'size'
 > & {
-  size?: InputSizes;
+  size?: IInputSizes;
+  status?: IInputStatus;
   fullWidth?: boolean;
-  paddingLeft?: InputSizes | null;
-  paddingRight?: InputSizes | null;
+  paddingLeft?: IInputSizes | null;
+  paddingRight?: IInputSizes | null;
 };
 
 const InputBase = React.forwardRef<HTMLInputElement, InputBaseProps>(
   (
     {
       size = 'md',
+      status = 'default',
       fullWidth,
       paddingLeft,
       paddingRight,
@@ -50,17 +60,17 @@ const InputBase = React.forwardRef<HTMLInputElement, InputBaseProps>(
     },
     ref,
   ) => {
-    console.log({ size });
     return (
       <input
         id={id}
         className={cn(
           inputVariants({
             size,
-            className,
+            status,
             fullWidth,
             paddingLeft,
             paddingRight,
+            className,
           }),
         )}
         ref={ref}
