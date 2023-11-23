@@ -7,6 +7,8 @@ export default function App() {
     <div className="space-y-2">
       <h3>inputs with button icon</h3>
       <Input
+        label="Input lg"
+        id="input-lg"
         placeholder="Input lg"
         size="lg"
         leftAdornment={
@@ -25,6 +27,9 @@ export default function App() {
         }
       />
       <Input
+        fullWidth
+        label="Input md"
+        id="input-md"
         placeholder="Input md"
         leftAdornment={
           <InputAdornment position="left">
@@ -43,6 +48,8 @@ export default function App() {
       />
 
       <Input
+        label="Input sm"
+        id="input-sm"
         placeholder="Input sm"
         size="sm"
         leftAdornment={
@@ -105,6 +112,7 @@ export default function App() {
           </InputAdornment>
         }
       />
+      <Input placeholder="Input sm" size="sm" />
     </div>
   );
 }
