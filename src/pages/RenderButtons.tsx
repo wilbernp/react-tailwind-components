@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button';
+import { Plus } from 'lucide-react';
 
 export default function RenderButtons() {
   return (
@@ -30,10 +31,26 @@ export default function RenderButtons() {
       <h3>filled buttons</h3>
       <div className="flex items-center gap-3">
         <Button>primary filled</Button>
+        <Button disabled>primary filled disable</Button>
         <Button color="secondary">secondary filled</Button>
         <Button color="success">success filled</Button>
         <Button color="danger">danger filled</Button>
         <Button color="error">error filled</Button>
+      </div>
+      <h3>buttons with icons</h3>
+      <div className="flex items-center gap-3">
+        <Button
+          variant="outlined"
+          leftIcon={<Plus className="h-3.5 w-3.5" />}
+          rightIcon={<Plus className="h-3.5 w-3.5" />}
+          size="xs"
+        >
+          button xs
+        </Button>
+        <Button size="sm">button sm</Button>
+        <Button>button md</Button>
+        <Button size="lg">button lg</Button>
+        <Button size="xl">button xl</Button>
       </div>
     </div>
   );

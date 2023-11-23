@@ -13,8 +13,8 @@ type InputFormProps = Omit<
   size?: IInputSizes;
   status?: IInputStatus;
   fullWidth?: boolean;
-  leftAdornment?: JSX.Element;
-  rightAdornment?: JSX.Element;
+  leftAdornment?: React.ReactElement;
+  rightAdornment?: React.ReactElement;
   label?: string;
   supportingText?: string;
 };

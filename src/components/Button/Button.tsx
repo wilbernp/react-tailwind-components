@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/utils';
 
 const buttonVariants = cva(
-  'whitespace-nowrap text-center transition-colors ease-in-out duration-500 focus:outline-none focus:ring-2 font-medium rounded-lg disabled:pointer-events-none disabled:opacity-50',
+  'whitespace-nowrap flex gap-2 items-center text-center transition-colors ease-in-out duration-500 focus:outline-none focus:ring-2 font-medium rounded-lg disabled:pointer-events-none disabled:opacity-50',
   {
     defaultVariants: { size: 'md', color: 'primary', variant: 'filled' },
     variants: {
@@ -16,10 +16,13 @@ const buttonVariants = cva(
       color: {
         primary:
           'bg-blue-700 hover:bg-blue-800 border-blue-700 focus:ring-blue-300',
-        secondary: 'bg-purple-700 hover:bg-purple-700 border-purple-700',
-        success: 'bg-green-700 hover:bg-green-800 border-green-700',
-        danger: 'bg-yellow-400 hover:bg-yellow-500 border-yellow-400',
-        error: 'bg-red-700 hover:bg-red-800 border-red-700',
+        secondary:
+          'bg-purple-700 hover:bg-purple-700 border-purple-700 focus:ring-purple-300',
+        success:
+          'bg-green-700 hover:bg-green-800 border-green-700 focus:ring-green-300',
+        danger:
+          'bg-yellow-400 hover:bg-yellow-500 border-yellow-400 focus:ring-yellow-300',
+        error: 'bg-red-700 hover:bg-red-800 border-red-700 focus:ring-red-300',
       },
       size: {
         xs: 'px-3 h-8 text-xs',
@@ -44,12 +47,24 @@ type ButtonHTML = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>;
 
 type ButtonProps = ButtonHTML &
   VariantProps<typeof buttonVariants> & {
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
     asChild?: boolean;
   };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, size, color, variant, children, asChild = false, ...props },
+    {
+      size,
+      color,
+      variant,
+      leftIcon,
+      rightIcon,
+      className,
+      children,
+      asChild = false,
+      ...props
+    },
     ref,
   ) => {
     const Comp = asChild ? Slot : 'button';
@@ -63,7 +78,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
+        {leftIcon}
         {children}
+        {rightIcon}
       </Comp>
     );
   },
