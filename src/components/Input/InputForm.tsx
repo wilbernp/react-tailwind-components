@@ -1,10 +1,10 @@
 import * as React from 'react';
 import InputBase from './InputBase';
-import { InputLabel } from '../InputLabel';
-import { InputSupportingText } from '../InputSupportingText';
 import { cn } from '@/utils';
 import { InputProvider } from '@/context/input';
 import { IInputSizes, IInputStatus } from '@/types';
+import InputLabel from './InputLabel';
+import InputSupportingText from './InputSupportingText';
 
 type InputFormProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,

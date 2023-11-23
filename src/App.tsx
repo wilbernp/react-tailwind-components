@@ -1,6 +1,6 @@
 import { IconButton } from './components/IconButton';
 import { InputForm } from './components/Input';
-import { InputAdornment } from './components/InputAdornment';
+import { InputAdornment } from './components/Input';
 
 export default function App() {
   return (
