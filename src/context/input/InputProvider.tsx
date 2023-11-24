@@ -1,6 +1,6 @@
-import { InputSizes } from '@/types';
 import React from 'react';
 import { InputContext } from './InputContext';
+import { InputSizes } from '@/types';
 
 interface InputProviderProps {
   children?: React.ReactElement;

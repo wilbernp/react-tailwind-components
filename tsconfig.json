@@ -20,8 +20,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Alias import */
+    /* Testing */
+    "types": ["vitest/globals", "node"],
 
+    /* Alias import */
     "paths": {
       "@/*": ["./src/*"]
     }

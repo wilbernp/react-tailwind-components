@@ -1,5 +1,5 @@
-import { InputSizes } from '@/types';
 import { createContext } from 'react';
+import { InputSizes } from '@/types';
 
 interface IInputContext {
   size?: InputSizes;
