@@ -38,7 +38,6 @@
 
 ```js
 <InputBase
-  {...restProps}
   size="lg"
   status="error"
   fullWidth
