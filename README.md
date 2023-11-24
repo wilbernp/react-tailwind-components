@@ -5,8 +5,10 @@
 ### Ejemplo
 
 ```js
-<IconButton size="lg">
-  <div className="h-6 w-6 rounded-full bg-gray-700"></div>
+import { XCircle } from 'lucide-react';
+...
+<IconButton size="sm">
+  <XCircle className="h-3.5 w-3.5" />
 </IconButton>
 ```
 
