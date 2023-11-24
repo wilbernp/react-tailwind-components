@@ -4,7 +4,7 @@ import { cn } from '@/utils';
 import { IInputSizes, IInputStatus } from '@/types';
 
 const inputVariants = cva(
-  'border outline-none hover:border-gray-700 text-sm rounded-lg block focus:ring-1',
+  'border outline-none text-gray-900 placeholder-gray-500 hover:border-gray-700 text-sm rounded-lg block focus:ring-1',
   {
     variants: {
       size: {
@@ -13,12 +13,11 @@ const inputVariants = cva(
         lg: 'px-4 sm:text-base h-14',
       },
       status: {
-        default:
-          'border-gray-400 text-gray-900 focus:ring-blue-500 focus:border-blue-500',
+        default: 'border-gray-400 focus:ring-blue-500 focus:border-blue-500',
         error:
-          'border-red-500 text-red-500 focus:ring-red-500 focus:border-red-500',
+          'border-red-500 caret-red-500 focus:ring-red-500 focus:border-red-500',
         succes:
-          'border-green-500 text-green-500 focus:ring-green-500 focus:border-green-500',
+          'border-green-500 caret-green-500 focus:ring-green-500 focus:border-green-500',
       },
       paddingLeft: {
         sm: 'pl-8',

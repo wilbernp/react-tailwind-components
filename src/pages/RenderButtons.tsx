@@ -4,6 +4,7 @@ import { Plus } from 'lucide-react';
 export default function RenderButtons() {
   return (
     <div>
+      <h2>Buttons</h2>
       <h3>buttons sizes</h3>
       <div className="flex items-center gap-3">
         <Button size="xs">button xs</Button>
@@ -40,17 +41,39 @@ export default function RenderButtons() {
       <h3>buttons with icons</h3>
       <div className="flex items-center gap-3">
         <Button
-          variant="outlined"
           leftIcon={<Plus className="h-3.5 w-3.5" />}
           rightIcon={<Plus className="h-3.5 w-3.5" />}
           size="xs"
         >
           button xs
         </Button>
-        <Button size="sm">button sm</Button>
-        <Button>button md</Button>
-        <Button size="lg">button lg</Button>
-        <Button size="xl">button xl</Button>
+        <Button
+          leftIcon={<Plus className="h-4 w-4" />}
+          rightIcon={<Plus className="h-4 w-4" />}
+          size="sm"
+        >
+          button sm
+        </Button>
+        <Button
+          leftIcon={<Plus className="h-4 w-4" />}
+          rightIcon={<Plus className="h-4 w-4" />}
+        >
+          button md
+        </Button>
+        <Button
+          leftIcon={<Plus className="h-5 w-5" />}
+          rightIcon={<Plus className="h-5 w-5" />}
+          size="lg"
+        >
+          button lg
+        </Button>
+        <Button
+          leftIcon={<Plus className="h-5 w-5" />}
+          rightIcon={<Plus className="h-5 w-5" />}
+          size="xl"
+        >
+          button xl
+        </Button>
       </div>
     </div>
   );

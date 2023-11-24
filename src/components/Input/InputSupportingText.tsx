@@ -5,7 +5,7 @@ import { IInputStatus } from '@/types';
 const inputSupportingTextVariants = cva('text-xs block h-4 mt-1', {
   variants: {
     status: {
-      default: 'text-gray-900',
+      default: 'text-gray-600',
       error: 'text-red-500',
       succes: 'text-green-500',
     },

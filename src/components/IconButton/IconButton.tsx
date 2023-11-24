@@ -5,7 +5,7 @@ type IconButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
   size?: 'sm' | 'md' | 'lg';
 };
 const iconButtonVariants = cva(
-  'flex items-center justify-center rounded-full hover:bg-gray-400',
+  'flex items-center text-gray-600 justify-center rounded-full hover:bg-gray-200',
   {
     defaultVariants: {
       size: 'md',
@@ -13,8 +13,8 @@ const iconButtonVariants = cva(
     variants: {
       size: {
         sm: 'h-6 w-6',
-        md: 'h-7 w-7 p-1',
-        lg: 'h-10 w-10 p-2',
+        md: 'h-7 w-7',
+        lg: 'h-9 w-9',
       },
     },
   },

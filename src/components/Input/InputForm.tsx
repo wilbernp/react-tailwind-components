@@ -13,8 +13,8 @@ type InputFormProps = Omit<
   size?: IInputSizes;
   status?: IInputStatus;
   fullWidth?: boolean;
-  leftAdornment?: React.ReactElement;
-  rightAdornment?: React.ReactElement;
+  leftAdornment?: React.ReactNode;
+  rightAdornment?: React.ReactNode;
   label?: string;
   supportingText?: string;
 };
@@ -24,7 +24,7 @@ const InputForm = React.forwardRef<HTMLInputElement, InputFormProps>(
     {
       className,
       size = 'md',
-      status = 'default',
+      status,
       fullWidth,
       leftAdornment,
       rightAdornment,
@@ -39,17 +39,22 @@ const InputForm = React.forwardRef<HTMLInputElement, InputFormProps>(
     return (
       <InputProvider size={size}>
         <div>
-          {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
+          {label && (
+            <InputLabel status={status} htmlFor={id}>
+              {label}
+            </InputLabel>
+          )}
           <div className={inputContainerClasses}>
             {leftAdornment}
             <InputBase
-              paddingLeft={leftAdornment && size}
-              paddingRight={rightAdornment && size}
               {...restProps}
               ref={ref}
-              size={size}
               className={cn(className)}
+              size={size}
+              status={status}
               fullWidth
+              paddingLeft={leftAdornment ? size : null}
+              paddingRight={rightAdornment ? size : null}
             />
             {rightAdornment}
           </div>
