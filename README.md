@@ -116,10 +116,10 @@ import { Plus } from 'lucide-react';
 
 ### Props
 
-| Prop name | Type                                                               | Default     | Description                                                          |
-| --------- | ------------------------------------------------------------------ | ----------- | -------------------------------------------------------------------- |
-| size      | `"xs"` o `"sm"` o `"md"` o `"lg"` o `"xl"`                         | `"md"`      | Define el tamaño del input                                           |
-| color     | `"primary"` o `"secondary"` o `"success"` o `"danger"` o `"error"` | `"primary"` | Define el tamaño del input                                           |
-| variant   | `"filled"` o `"outlined"`                                          | default     | Define el color del input                                            |
-| leftIcon  | component                                                          | undefined   | Icono del lado que se posicionará al lado izquierdo dentro del boton |
-| leftIcon  | component                                                          | undefined   | Icono del lado que se posicionará al lado izquierdo dentro del boton |
+| Prop name | Type                                                               | Default     | Description                                                 |
+| --------- | ------------------------------------------------------------------ | ----------- | ----------------------------------------------------------- |
+| size      | `"xs"` o `"sm"` o `"md"` o `"lg"` o `"xl"`                         | `"md"`      | Define el tamaño del botón                                  |
+| color     | `"primary"` o `"secondary"` o `"success"` o `"danger"` o `"error"` | `"primary"` | Define el tamaño del botón                                  |
+| variant   | `"filled"` o `"outlined"`                                          | default     | Define el color del input                                   |
+| leftIcon  | component                                                          | undefined   | Icono que se posicionará al lado izquierdo dentro del boton |
+| leftIcon  | component                                                          | undefined   | Icono que se posicionará al lado izquierdo dentro del boton |
