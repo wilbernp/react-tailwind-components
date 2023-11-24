@@ -20,9 +20,9 @@ const iconButtonVariants = cva(
   },
 );
 export default function IconButton({
+  size,
   children,
   className,
-  size,
   ...restProps
 }: IconButtonProps) {
   return (

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/utils';
@@ -49,7 +48,6 @@ type ButtonProps = ButtonHTML &
   VariantProps<typeof buttonVariants> & {
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-    asChild?: boolean;
   };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -62,15 +60,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       rightIcon,
       className,
       children,
-      asChild = false,
       ...props
     },
     ref,
   ) => {
-    const Comp = asChild ? Slot : 'button';
     const buttonClasses = cn({ 'bg-transparent': variant === 'outlined' });
     return (
-      <Comp
+      <button
         className={cn(
           buttonVariants({ size, className, color, variant }),
           buttonClasses,
@@ -81,7 +77,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {leftIcon}
         {children}
         {rightIcon}
-      </Comp>
+      </button>
     );
   },
 );

@@ -22,12 +22,12 @@ const inputVariants = cva(
       paddingLeft: {
         sm: 'pl-8',
         md: 'pl-9',
-        lg: 'pl-12',
+        lg: 'pl-11',
       },
       paddingRight: {
         sm: 'pr-8',
         md: 'pr-9',
-        lg: 'pr-12',
+        lg: 'pr-11',
       },
       fullWidth: { true: 'w-full' },
     },
