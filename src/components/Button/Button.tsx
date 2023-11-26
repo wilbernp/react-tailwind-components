@@ -1,7 +1,8 @@
-import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/utils';
+import React from 'react';
+import { ExcludeNull } from '@/types';
 
 const buttonVariants = cva(
   'whitespace-nowrap flex gap-2 items-center text-center transition-colors ease-in-out duration-500 focus:outline-none focus:ring-2 font-medium rounded-lg disabled:pointer-events-none disabled:opacity-50',
@@ -42,10 +43,11 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonHTML = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>;
+type ButtonHTML = React.ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-type ButtonProps = ButtonHTML &
-  VariantProps<typeof buttonVariants> & {
+type ButtonProps = Omit<ButtonHTML, 'color'> &
+  ExcludeNull<ButtonVariants> & {
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
   };
@@ -53,7 +55,7 @@ type ButtonProps = ButtonHTML &
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      size,
+      size = 'md',
       color,
       variant,
       leftIcon,
